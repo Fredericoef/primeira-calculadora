@@ -1,0 +1,38 @@
+fun main() {
+   println("Digite o número corresponte à operação: \n 1=soma; 2=subtração;3=multiplicação; 4=divisão; 5=porcentagem; 6=potenciação ")
+	println(" ")
+    var a: Float? = 2f
+    var b: Float? = 3f
+    //val operacao = 1
+    resultado(a, b)
+    
+}
+
+fun resultado(a:Float?, b:Float?){
+    val operacao = 6
+    if(a == null || b == null){
+        println("Valor inválido. Digite um valor válido")
+    } else {
+        if(operacao == 1){
+       println(a+b) 
+    	} else if(operacao == 2){
+        	println(a-b)
+    	} else if(operacao == 3){
+        	println(a*b)
+    	} else if (operacao == 4){
+        	println(a/b)
+    	} else if(operacao == 5){
+            println(a/100*b)
+        }else if(operacao == 6){
+            var result = 1f
+            var i = 1
+            while (i <=b){
+                result *= a
+                i+=1
+            }
+            println("O número $a elevado à $b é $result")
+            
+        }else {
+        	println("Número de operação inválido. Digite um número de 1 a 4")
+    	}
+    }
